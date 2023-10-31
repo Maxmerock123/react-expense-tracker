@@ -1,0 +1,24 @@
+{
+  "transaction": [
+    {
+      "id": 1,
+      "name": "BTS monthly",
+      "amount": 1000,
+      "type": "expense",
+      "catagory": "transport",
+      "date": "10-12-2023"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ]
+}

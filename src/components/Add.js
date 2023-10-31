@@ -1,6 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
 
+// Enables CORS
+const cors = require('cors');
+app.use(cors({ origin: true }));
+
 const Add = () => {
   const [name,setName] = useState("")
   const [expense,setExpense] = useState("")
@@ -13,9 +17,17 @@ const Add = () => {
     console.log(event.target.value)
   }
 
-  function onSubmit(){
-    console.log(name,expense,type,catagory,date)
+  async function onSubmit(){
+    // console.log(name,expense,type,catagory,date)
+    const test = fetch("http://localhost:5000/transaction",{
+      mode: "cors"
+
+    })
+    
+    console.log(test)
   }
+
+  
 
 
   return (
@@ -23,11 +35,11 @@ const Add = () => {
     <form>
       <div>
         <label for="name">Transaction Name </label>
-        <input type="text" id="name" name="name" autocomplete="off" onChange={(e)=>setName(e.target.value)}/>
+        <input type="text" id="name" name="name" autoComplete="off" onChange={(e)=>setName(e.target.value)}/>
       </div>  
       <div>
         <label for="expense">Amount $ </label>
-        <input type="number" id="amount" name="amount" autocomplete="off" onChange={(e)=>setExpense(e.target.value)}/>
+        <input type="number" id="amount" name="amount" autoComplete="off" onChange={(e)=>setExpense(e.target.value)}/>
       </div>  
       <div onChange={onChangeValue}>
         <input type="radio" id="expense" name="type" value="expense"></input>
