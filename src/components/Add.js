@@ -1,9 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 
-// Enables CORS
-const cors = require('cors');
-app.use(cors({ origin: true }));
 
 const Add = () => {
   const [name,setName] = useState("")
@@ -17,14 +14,19 @@ const Add = () => {
     console.log(event.target.value)
   }
 
+  
+
   async function onSubmit(){
     // console.log(name,expense,type,catagory,date)
-    const test = fetch("http://localhost:5000/transaction",{
-      mode: "cors"
-
+    const res = await fetch("http://localhost:5000/transaction",{
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({name:name,expense:expense,type:type,catagory:catagory,date:date})
     })
     
-    console.log(test)
+    console.log(res.text)
   }
 
   
