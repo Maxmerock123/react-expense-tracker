@@ -135,6 +135,94 @@
       "catagory": "food-beverage",
       "date": "2023-11-02",
       "id": 20
+    },
+    {
+      "name": "Test3",
+      "amount": "120",
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-03",
+      "id": 21
+    },
+    {
+      "name": "Test4",
+      "amount": "123",
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-03",
+      "id": 22
+    },
+    {
+      "name": "Test4",
+      "amount": -123,
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-03",
+      "id": 23
+    },
+    {
+      "name": "test 5",
+      "amount": "125",
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-03",
+      "id": 24
+    },
+    {
+      "name": "test6",
+      "amount": "126",
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-03",
+      "id": 25
+    },
+    {
+      "name": "test7",
+      "amount": "777",
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-03",
+      "id": 26
+    },
+    {
+      "name": "test7",
+      "amount": -777,
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-03",
+      "id": 27
+    },
+    {
+      "name": "test7",
+      "amount": 777,
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-03",
+      "id": 28
+    },
+    {
+      "name": "test7",
+      "amount": -777,
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-03",
+      "id": 29
+    },
+    {
+      "name": "hye",
+      "amount": -125,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-03",
+      "id": 30
+    },
+    {
+      "name": "hye2",
+      "amount": 125,
+      "type": "income",
+      "catagory": "transport",
+      "date": "2023-11-16",
+      "id": 31
     }
   ]
 }

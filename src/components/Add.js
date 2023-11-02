@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 
 const Add = () => {
@@ -14,18 +14,30 @@ const Add = () => {
     console.log(event.target.value)
   }
 
-  function convertToNeg(amount){
+  async function setNegative(amount){
+    let result = 0;
+    console.log("amount before setNegative: ",amount)
     if (type == "expense"){
-      // Set amount to negative value
+      // TODO Set amount to negative value
+      result = Math.abs(amount) * -1;
     }
     else if (type == "income"){
-      // Set amount to Positive value
+      // TODO Set amount to Positive value
+      result = Math.abs(amount);
     }
+    console.log("setNegative: ",result)
+    setAmount(result);
+    console.log("amount: ",amount)
+    return 
   }
+
+  useEffect(()=>{
+    setNegative(amount)
+  },[catagory,date])
 
   async function onSubmit(){
     // console.log(name,expense,type,catagory,date)
-    convertToNeg()
+    setNegative(amount)
     
     const res = await fetch("http://localhost:5000/transaction",{
       method: "POST",
@@ -34,8 +46,6 @@ const Add = () => {
       },
       body: JSON.stringify({name:name,amount:amount,type:type,catagory:catagory,date:date})
     })
-    
-    console.log(res.text)
   }
 
   
