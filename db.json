@@ -3,50 +3,138 @@
     {
       "id": 1,
       "name": "BTS monthly",
-      "amount": 1000,
+      "amount": "1000",
       "type": "expense",
       "catagory": "transport",
       "date": "10-12-2023"
     },
     {
       "name": "Steakhouse Dinner",
-      "expense": "125",
+      "amount": "120",
       "type": "expense",
       "catagory": "food-beverage",
       "date": "2023-11-01",
       "id": 2
     },
     {
-      "name": "asd",
-      "expense": "123",
-      "type": "expense",
-      "catagory": "",
-      "date": "",
-      "id": 3
-    },
-    {
       "name": "Battery Charger",
-      "expense": "120",
+      "amount": "120",
       "type": "expense",
       "catagory": "shopping",
       "date": "2023-11-02",
       "id": 4
     },
     {
-      "name": "",
-      "expense": "",
-      "type": "",
-      "catagory": "",
-      "date": "",
-      "id": 5
+      "name": "Youtube subcription",
+      "amount": "135",
+      "type": "expense",
+      "catagory": "bill",
+      "date": "2023-11-02",
+      "id": 7
     },
     {
-      "name": "",
-      "expense": "",
-      "type": "",
-      "catagory": "",
-      "date": "",
-      "id": 6
+      "name": "Sportify",
+      "amount": "125",
+      "type": "expense",
+      "catagory": "bill",
+      "date": "2023-11-02",
+      "id": 8
+    },
+    {
+      "name": "Netflix",
+      "amount": "229",
+      "type": "expense",
+      "catagory": "bill",
+      "date": "2023-11-02",
+      "id": 9
+    },
+    {
+      "name": "padgraprao",
+      "amount": 60,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-09",
+      "id": 10
+    },
+    {
+      "name": "Noodle soup",
+      "amount": 80,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-02",
+      "id": 11
+    },
+    {
+      "name": "Noodle soup",
+      "amount": 80,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-02",
+      "id": 12
+    },
+    {
+      "name": "soup",
+      "amount": 123,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-02",
+      "id": 13
+    },
+    {
+      "name": "test1",
+      "amount": 125,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-02",
+      "id": 14
+    },
+    {
+      "name": "test2",
+      "amount": 123,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-02",
+      "id": 15
+    },
+    {
+      "name": "test",
+      "amount": 123,
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-02",
+      "id": 16
+    },
+    {
+      "name": "test",
+      "amount": -123,
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-11-02",
+      "id": 17
+    },
+    {
+      "name": "asd",
+      "amount": "-123",
+      "type": "expense",
+      "catagory": "bill",
+      "date": "2023-11-02",
+      "id": 18
+    },
+    {
+      "name": "asd",
+      "amount": "123",
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-02",
+      "id": 19
+    },
+    {
+      "name": "asd",
+      "amount": "123",
+      "type": "income",
+      "catagory": "food-beverage",
+      "date": "2023-11-02",
+      "id": 20
     }
   ]
 }

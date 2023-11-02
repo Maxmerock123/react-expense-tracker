@@ -1,6 +1,7 @@
 import './App.css';
 import Add from './components/Add'
 import Display from './components/Display'
+import 'bootstrap/dist/css/bootstrap.css';
 
 const fetchData = async ()=>{
   const res = await fetch("http://localhost:5000/transaction");
@@ -17,7 +18,7 @@ async function getData() {
   // console.log(result)
   return result
 }
-const transactionData = getData()
+const transactionJson = getData()
 
 
 
@@ -39,7 +40,7 @@ function App() {
         <Add/>
       </div>
       <div>
-        <Display transactionData={transactionData}/>
+        <Display transactionJson={transactionJson}/>
       </div>
     </div>
   );

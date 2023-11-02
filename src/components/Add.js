@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const Add = () => {
   const [name,setName] = useState("")
-  const [expense,setExpense] = useState("")
+  const [amount,setAmount] = useState("")
   const [type,setType] = useState("")
   const [catagory,setCatagory] = useState("")
   const [date,setDate] = useState("")
@@ -14,16 +14,25 @@ const Add = () => {
     console.log(event.target.value)
   }
 
-  
+  function convertToNeg(amount){
+    if (type == "expense"){
+      // Set amount to negative value
+    }
+    else if (type == "income"){
+      // Set amount to Positive value
+    }
+  }
 
   async function onSubmit(){
     // console.log(name,expense,type,catagory,date)
+    convertToNeg()
+    
     const res = await fetch("http://localhost:5000/transaction",{
       method: "POST",
       headers: {
         "Content-type": "application/json"
       },
-      body: JSON.stringify({name:name,expense:expense,type:type,catagory:catagory,date:date})
+      body: JSON.stringify({name:name,amount:amount,type:type,catagory:catagory,date:date})
     })
     
     console.log(res.text)
@@ -40,8 +49,8 @@ const Add = () => {
         <input type="text" id="name" name="name" autoComplete="off" onChange={(e)=>setName(e.target.value)}/>
       </div>  
       <div>
-        <label for="expense">Amount $ </label>
-        <input type="number" id="amount" name="amount" autoComplete="off" onChange={(e)=>setExpense(e.target.value)}/>
+        <label for="amount">Amount $ </label>
+        <input type="number" id="amount" name="amount" autoComplete="off" onChange={(e)=>{setAmount(e.target.value)}}/>
       </div>  
       <div onChange={onChangeValue}>
         <input type="radio" id="expense" name="type" value="expense"></input>

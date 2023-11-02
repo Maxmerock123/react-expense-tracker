@@ -31,14 +31,17 @@ const Display = ({transactionJson}) => {
 
     return (
         <div>
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Name</th>
-                    <th>type</th>
-                    <th>catagory</th>
-                    <th>amount</th>
-                </tr>
+            <table className='table table-dark'>
+                <thead className='thead-dark'>
+                    <tr>
+                        <th scope='col'>Date</th>
+                        <th scope='col'>Name</th>
+                        <th scope='col'>type</th>
+                        <th scope='col'>catagory</th>
+                        <th scope='col'>amount</th>
+                    </tr>
+                </thead>
+                <tbody>
                 {items.map((item)=>(
                     <tr>
                         <td>{item.date}</td>
@@ -48,8 +51,10 @@ const Display = ({transactionJson}) => {
                         <td>{item.amount}</td>
                     </tr>
                 ))}
-                
+                </tbody>
             </table>
+
+            
         </div>
     )
     }
