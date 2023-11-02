@@ -23,6 +23,30 @@
       "catagory": "",
       "date": "",
       "id": 3
+    },
+    {
+      "name": "Battery Charger",
+      "expense": "120",
+      "type": "expense",
+      "catagory": "shopping",
+      "date": "2023-11-02",
+      "id": 4
+    },
+    {
+      "name": "",
+      "expense": "",
+      "type": "",
+      "catagory": "",
+      "date": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "expense": "",
+      "type": "",
+      "catagory": "",
+      "date": "",
+      "id": 6
     }
   ]
 }

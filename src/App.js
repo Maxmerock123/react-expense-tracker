@@ -12,11 +12,13 @@ const fetchData = async ()=>{
   return data
 } 
 
-// async function testPrint() {
-//   const result = await fetchData();
-//   console.log(JSON.stringify(result))
-// }
-// testPrint()
+async function getData() {
+  const result = await fetchData();
+  // console.log(result)
+  return result
+}
+const transactionData = getData()
+
 
 
 
@@ -37,7 +39,7 @@ function App() {
         <Add/>
       </div>
       <div>
-        <Display fetchData={fetchData}/>
+        <Display transactionData={transactionData}/>
       </div>
     </div>
   );
