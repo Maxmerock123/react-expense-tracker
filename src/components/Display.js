@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react';
 
 
 
-const Display = ({transactionJson}) => {
+const Display = ({onDelete}) => {
     const [items,setItems] = useState([]);
 
     const fetchData = async ()=>{
@@ -53,6 +53,7 @@ const Display = ({transactionJson}) => {
                         <th scope='col'>type</th>
                         <th scope='col'>catagory</th>
                         <th scope='col'>amount</th>
+                        <th scope='col'></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,6 +64,9 @@ const Display = ({transactionJson}) => {
                         <td>{item.type}</td>
                         <td>{item.catagory}</td>
                         <td>{item.amount}</td>
+                        <td>
+                            <button onClick={onDelete}>x</button>
+                        </td>
                     </tr>
                 ))}
                 </tbody>

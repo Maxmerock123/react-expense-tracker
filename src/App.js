@@ -20,6 +20,10 @@ async function getData() {
 }
 const transactionJson = getData()
 
+function handleDelete(){
+  console.log("clicked on delete")
+}
+
 
 
 
@@ -40,7 +44,7 @@ function App() {
         <Add/>
       </div>
       <div>
-        <Display transactionJson={transactionJson}/>
+        <Display onDelete={handleDelete}/>
       </div>
     </div>
   );
