@@ -19,9 +19,23 @@ const Display = ({transactionJson}) => {
         fetchData()
     },[]);
 
-    useEffect(()=>{
-        console.log(items)
-    },[items])
+    var totalIncome = 0;
+    var totalExpense = 0;
+    var totalRemaining = 0;
+    function getAmountSum(items){
+        items.map((item)=>{
+            totalRemaining += parseFloat(item.amount);
+
+            if (item.type == "income"){
+                totalIncome += parseFloat(item.amount);
+            }
+            else if (item.type == "expense") {
+                totalExpense += parseFloat(item.amount);
+            }
+        })
+        return;
+    }
+    getAmountSum(items)
 
 
 
@@ -53,7 +67,11 @@ const Display = ({transactionJson}) => {
                 ))}
                 </tbody>
             </table>
-
+            <div>
+                <h2>Total Income: {totalIncome}</h2>      
+                <h2>Total Expense: {totalExpense}</h2>      
+                <h2>Total Remaining: {totalRemaining}</h2>      
+            </div>
             
         </div>
     )
