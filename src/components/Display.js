@@ -58,37 +58,43 @@ const Display = ({onUpdate}) => {
 
     return (
         <div>
-            <table className='table table-dark'>
-                <thead className='thead-dark'>
-                    <tr>
-                        <th scope='col'>Date</th>
-                        <th scope='col'>Name</th>
-                        <th scope='col'>type</th>
-                        <th scope='col'>catagory</th>
-                        <th scope='col'>amount</th>
-                        <th scope='col'></th>
-                    </tr>
-                </thead>
-                <tbody>
-                {items.map((item)=>(
-                    <tr>
-                        <td>{item.date}</td>
-                        <td>{item.name}</td>
-                        <td>{item.type}</td>
-                        <td>{item.catagory}</td>
-                        <td>{item.amount}</td>
-                        <td>
-                            <button id={item.id}  onClick={onDelete}>x</button>
-                        </td>
-                    </tr>
-                ))}
-                </tbody>
-            </table>
-            <div>
-                <h2>Total Income: {totalIncome}</h2>      
-                <h2>Total Expense: {totalExpense}</h2>      
-                <h2>Total Remaining: {totalRemaining}</h2>      
+            <div id='container-table'>
+                <table className='table'>
+                    <thead className='table-head'>
+                        <tr className='table-row'>
+                            <th scope='col'>Date</th>
+                            <th scope='col'>Name</th>
+                            <th scope='col'>type</th>
+                            <th scope='col'>catagory</th>
+                            <th scope='col'>amount</th>
+                            <th scope='col'></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {items.map((item)=>(
+                        <tr id='container-items'>
+                            <td>{item.date}</td>
+                            <td>{item.name}</td>
+                            <td>{item.type}</td>
+                            <td>{item.catagory}</td>
+                            <td>{item.amount}</td>
+                            <td>
+                                <button id={item.id}  onClick={onDelete}>x</button>
+                            </td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+                    <div id='container-total'>
+                        <div id='total'>
+                            <h3>Total Income: {totalIncome}</h3>      
+                            <h3>Total Expense: {totalExpense}</h3>      
+                            <h3>Total Remaining: {totalRemaining}</h3>      
+                        </div>
+                    </div>
+
             </div>
+
             
         </div>
     )

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Add from './components/Add'
 import Display from './components/Display'
-import 'bootstrap/dist/css/bootstrap.css';
+
 
 const fetchData = async ()=>{
   const res = await fetch("http://localhost:5000/transaction");
@@ -43,7 +43,9 @@ function App() {
   return (
     <div>
       <div className="App">
-        <h1>Expense Tracker App</h1>
+        <div id='logo-container'>
+          <h1 id='logo'>Expense Tracker App</h1>
+        </div>
         <Add onUpdate={handleUpdate} key={onUpdate}/>
       </div>
       <div>

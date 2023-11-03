@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://img.freepik.com/free-photo/watercolor-paper-texture_1194-6307.jpg?w=1380&t=st=1699010928~exp=1699011528~hmac=708a13ed0f6ddb256d626d98b972696f1e4fb1595b49082ebb3c1a1419520886);
 }
 
 code {
@@ -12,11 +13,105 @@ code {
     monospace;
 }
 
+#logo {
+  
+  background-color: #F99417;
+  padding: 10px;
+  border-radius: 10px;
+}
+#logo-container{
+  display: flex;
+  justify-content: center;
+}
+
 #container-expense {
-  color: red;
+  color: rgb(250, 169, 169);
+  font-weight: bold;
 
 }
 
 #container-income {
-  color: rgb(19, 196, 19);
+  color: rgb(177, 255, 177);
+  font-weight: bold;
 }
+
+#container-table{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width:800px;
+  /* border: 2px solid red; */
+
+}
+
+.table{
+  border: 2px solid black;
+  background-color: #4D4C7D;
+  min-width: 800px;
+
+}
+
+
+.table-head {
+  background-color: #F99417;
+  border-radius: 30px;
+  color:black
+}
+
+#container-items {
+  color: white;
+  
+}
+
+/* Form adding */
+#container-form {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  justify-content: center;
+  max-width: 400px;
+  flex-wrap: wrap;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 30px;
+  gap: 10px;
+  padding: 20px;
+  background-color: #4D4C7D;
+  color: white;
+  
+}
+
+#btn-submit {
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+  background-color:#F99417;
+  margin: 10px;
+  min-width: 100px;
+  min-height: 50px;
+}
+
+#container-total {
+  display: flex;
+  max-width: 600px;
+  justify-content: end;
+  margin-left: auto;
+}
+
+#total{
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: end;
+  max-width: 300px;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+

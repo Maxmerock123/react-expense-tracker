@@ -31,6 +31,14 @@
       "catagory": "gift",
       "date": "2023-11-03",
       "id": 4
+    },
+    {
+      "name": "test1",
+      "amount": -1222,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-03",
+      "id": 7
     }
   ]
 }
