@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react';
 
 
 
-const Display = ({onDelete}) => {
+const Display = ({onUpdate}) => {
     const [items,setItems] = useState([]);
 
     const fetchData = async ()=>{
@@ -18,6 +18,7 @@ const Display = ({onDelete}) => {
     useEffect(()=>{
         fetchData()
     },[]);
+
 
     var totalIncome = 0;
     var totalExpense = 0;
@@ -37,6 +38,18 @@ const Display = ({onDelete}) => {
     }
     getAmountSum(items)
 
+    async function onDelete(event){
+        console.log("item.id = ",event.currentTarget.id)
+        const id = event.currentTarget.id
+        const res = await fetch(`http://localhost:5000/transaction/${id}`,{method:'DELETE'})
+        .then(res => res.json())
+        .then((result)=>{
+            console.log(result)
+        })
+        await onUpdate();
+    }
+
+    
 
 
     
@@ -65,7 +78,7 @@ const Display = ({onDelete}) => {
                         <td>{item.catagory}</td>
                         <td>{item.amount}</td>
                         <td>
-                            <button onClick={onDelete}>x</button>
+                            <button id={item.id}  onClick={onDelete}>x</button>
                         </td>
                     </tr>
                 ))}

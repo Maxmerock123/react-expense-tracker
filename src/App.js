@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 import Add from './components/Add'
 import Display from './components/Display'
@@ -13,16 +14,10 @@ const fetchData = async ()=>{
   return data
 } 
 
-async function getData() {
-  const result = await fetchData();
-  // console.log(result)
-  return result
-}
-const transactionJson = getData()
 
-function handleDelete(){
-  console.log("clicked on delete")
-}
+
+
+
 
 
 
@@ -31,7 +26,15 @@ function handleDelete(){
 
 
 function App() {
+  const [onUpdate,setUpdate] = useState(false)
 
+  useEffect(()=>{
+    console.log("rendered")
+  })
+
+  function handleUpdate(){
+    setUpdate(!onUpdate);
+  }
 
 
   const add = ()=>{
@@ -41,10 +44,10 @@ function App() {
     <div>
       <div className="App">
         <h1>Expense Tracker App</h1>
-        <Add/>
+        <Add onUpdate={handleUpdate} key={onUpdate}/>
       </div>
       <div>
-        <Display onDelete={handleDelete}/>
+        <Display onUpdate={handleUpdate} key={onUpdate}/>
       </div>
     </div>
   );

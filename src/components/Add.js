@@ -2,12 +2,13 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 
 
-const Add = () => {
+const Add = ({onSubmit,onUpdate}) => {
   const [name,setName] = useState("")
   const [amount,setAmount] = useState("")
   const [type,setType] = useState("")
   const [catagory,setCatagory] = useState("")
   const [date,setDate] = useState("")
+  const [updateFlag,setUpdateFlag] = useState(false)
 
   function onChangeValue(event) {
     setType(event.target.value);
@@ -46,6 +47,7 @@ const Add = () => {
       },
       body: JSON.stringify({name:name,amount:amount,type:type,catagory:catagory,date:date})
     })
+    onUpdate()
   }
 
   

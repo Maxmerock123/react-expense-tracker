@@ -17,16 +17,16 @@
       "id": 2
     },
     {
-      "name": "Salary",
-      "amount": 1000,
-      "type": "income",
-      "catagory": "salary",
+      "name": "Bike",
+      "amount": -1200,
+      "type": "expense",
+      "catagory": "shopping",
       "date": "2023-11-03",
       "id": 3
     },
     {
-      "name": "Gift from parent",
-      "amount": 1500,
+      "name": "gift from dad",
+      "amount": 2500,
       "type": "income",
       "catagory": "gift",
       "date": "2023-11-03",
