@@ -169,11 +169,11 @@
       "id": 22
     },
     {
-      "name": "Drink in amazon",
-      "amount": -65,
-      "type": "expense",
-      "catagory": "food-beverage",
-      "date": "2023-11-04",
+      "name": "ASAP Stock",
+      "amount": 1200,
+      "type": "income",
+      "catagory": "investment",
+      "date": "2023-11-05",
       "id": 23
     }
   ]

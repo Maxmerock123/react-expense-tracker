@@ -40,6 +40,14 @@ const Display = ({onUpdate}) => {
     }
     getAmountSum(items)
 
+    function onDeleteCheck(event){
+        if (window.confirm("delete the transaction?")){
+            onDelete(event)
+        } else {
+            console.log("canceled delete")
+            return 0
+        }
+    }
     async function onDelete(event){
         console.log("item.id = ",event.currentTarget.id)
         const id = event.currentTarget.id
@@ -81,7 +89,7 @@ const Display = ({onUpdate}) => {
                             <td>{item.catagory}</td>
                             <td>{item.amount}</td>
                             <td>
-                                <button id={item.id}  onClick={onDelete}>x</button>
+                                <button id={item.id}  onClick={onDeleteCheck}>x</button>
                             </td>
                         </tr>
                     ))}
@@ -89,8 +97,8 @@ const Display = ({onUpdate}) => {
                 </table>
                     <div id='container-total'>
                         <div id='total'>
-                            <h3>Total Income: {totalIncome}</h3>      
-                            <h3>Total Expense: {totalExpense}</h3>      
+                            <h3 className='income-text'>Total Income: {totalIncome}</h3>      
+                            <h3 className='expense-text'>Total Expense: {totalExpense}</h3>      
                             <h3>Total Remaining: {totalRemaining}</h3>      
                         </div>
                     </div>

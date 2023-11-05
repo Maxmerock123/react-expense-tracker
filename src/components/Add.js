@@ -82,14 +82,23 @@ const Add = ({onSubmit,onUpdate}) => {
         <div>
           <lable for="catagory-form">Catagory </lable>
           <select name="catagory" form="catagory-form" onChange={(e)=>setCatagory(e.target.value)}>
-            <option value="none">-Select a Catagory-</option>
+            <option value="">-Select a Category-</option>
+            <option disabled value="">------Expense------</option>
             <option value="food-beverage">Food-beverage</option>
             <option value="transport">Transport</option>
             <option value="bill">Bill</option>
             <option value="shopping">Shopping</option>
-            <option value="salary">Salary</option>
             <option value="gift">Gift</option>
             <option value="others">Others</option>
+
+            <option disabled value="">------Income------</option>
+            <option value="salary">Salary</option>
+            <option value="bonus">Bonus</option>
+            <option value="freelance">Freelance</option>
+            <option value="dividends">Dividends</option>
+            <option value="rental income">Rental Income</option>
+            <option value="investment">Investment</option>
+            <option value="other income">Other Income</option>
           </select>
         </div>  
         <div>
