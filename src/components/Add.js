@@ -1,3 +1,4 @@
+import { Alert } from 'bootstrap';
 import React from 'react'
 import { useState,useEffect } from 'react';
 
@@ -8,7 +9,6 @@ const Add = ({onSubmit,onUpdate}) => {
   const [type,setType] = useState("")
   const [catagory,setCatagory] = useState("")
   const [date,setDate] = useState("")
-  const [updateFlag,setUpdateFlag] = useState(false)
 
   function onChangeValue(event) {
     setType(event.target.value);
@@ -39,15 +39,23 @@ const Add = ({onSubmit,onUpdate}) => {
   async function onSubmit(){
     // console.log(name,expense,type,catagory,date)
     setNegative(amount)
+
+    if (name == "" || amount == "" || type == "" || catagory == "" || date == ""){
+      alert("invalid input, please provide all inforamtion about the transaction")
+    } else {
+      const res = await fetch("http://localhost:5000/transaction",{
+        method: "POST",
+        mode : "cors",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify({name:name,amount:amount,type:type,catagory:catagory,date:date})
+      })
+      onUpdate()
+    }
+
+   
     
-    const res = await fetch("http://localhost:5000/transaction",{
-      method: "POST",
-      headers: {
-        "Content-type": "application/json"
-      },
-      body: JSON.stringify({name:name,amount:amount,type:type,catagory:catagory,date:date})
-    })
-    onUpdate()
   }
 
   

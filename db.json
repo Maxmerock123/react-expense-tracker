@@ -1,14 +1,6 @@
 {
   "transaction": [
     {
-      "id": 1,
-      "name": "BTS monthly",
-      "amount": "-1000",
-      "type": "expense",
-      "catagory": "transport",
-      "date": "10-12-2023"
-    },
-    {
       "name": "Steakhouse Dinner",
       "amount": "-1000",
       "type": "expense",
@@ -17,28 +9,172 @@
       "id": 2
     },
     {
-      "name": "Bike",
-      "amount": -1200,
+      "name": "Grocery Shopping",
+      "amount": "-200",
       "type": "expense",
-      "catagory": "shopping",
-      "date": "2023-11-03",
+      "catagory": "food-beverage",
+      "date": "2023-10-29",
       "id": 3
     },
     {
-      "name": "gift from dad",
-      "amount": 2500,
-      "type": "income",
-      "catagory": "gift",
-      "date": "2023-11-03",
+      "name": "Gasoline Refill",
+      "amount": "-50",
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-10-28",
       "id": 4
     },
     {
-      "name": "test1",
-      "amount": -1222,
+      "name": "Internet Bill",
+      "amount": "-80",
+      "type": "expense",
+      "catagory": "bill",
+      "date": "2023-10-27",
+      "id": 5
+    },
+    {
+      "name": "Online Shopping",
+      "amount": "-300",
+      "type": "expense",
+      "catagory": "shopping",
+      "date": "2023-10-26",
+      "id": 6
+    },
+    {
+      "name": "Salary Deposit",
+      "amount": "2500",
+      "type": "income",
+      "catagory": "salary",
+      "date": "2023-10-25",
+      "id": 7
+    },
+    {
+      "name": "Birthday Gift",
+      "amount": "-50",
+      "type": "expense",
+      "catagory": "gift",
+      "date": "2023-10-24",
+      "id": 8
+    },
+    {
+      "name": "Restaurant Lunch",
+      "amount": "-150",
       "type": "expense",
       "catagory": "food-beverage",
-      "date": "2023-11-03",
-      "id": 7
+      "date": "2023-10-23",
+      "id": 9
+    },
+    {
+      "name": "Public Transport",
+      "amount": "-20",
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-10-22",
+      "id": 10
+    },
+    {
+      "name": "Electricity Bill",
+      "amount": "-100",
+      "type": "expense",
+      "catagory": "bill",
+      "date": "2023-10-21",
+      "id": 11
+    },
+    {
+      "name": "Online Electronics Shopping",
+      "amount": "-400",
+      "type": "expense",
+      "catagory": "shopping",
+      "date": "2023-10-20",
+      "id": 12
+    },
+    {
+      "name": "Freelance Payment",
+      "amount": "800",
+      "type": "income",
+      "catagory": "salary",
+      "date": "2023-10-19",
+      "id": 13
+    },
+    {
+      "name": "Anniversary Gift",
+      "amount": "-75",
+      "type": "expense",
+      "catagory": "gift",
+      "date": "2023-10-18",
+      "id": 14
+    },
+    {
+      "name": "Fast Food Dinner",
+      "amount": "-50",
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-10-17",
+      "id": 15
+    },
+    {
+      "name": "Car Maintenance",
+      "amount": "-200",
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-10-16",
+      "id": 16
+    },
+    {
+      "name": "Water Bill",
+      "amount": "-30",
+      "type": "expense",
+      "catagory": "bill",
+      "date": "2023-10-15",
+      "id": 17
+    },
+    {
+      "name": "Clothing Shopping",
+      "amount": "-150",
+      "type": "expense",
+      "catagory": "shopping",
+      "date": "2023-10-14",
+      "id": 18
+    },
+    {
+      "name": "Investment Dividends",
+      "amount": "300",
+      "type": "income",
+      "catagory": "salary",
+      "date": "2023-10-13",
+      "id": 19
+    },
+    {
+      "name": "Holiday Gift",
+      "amount": "-60",
+      "type": "expense",
+      "catagory": "gift",
+      "date": "2023-10-12",
+      "id": 20
+    },
+    {
+      "name": "Cafe Breakfast",
+      "amount": "-30",
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-10-11",
+      "id": 21
+    },
+    {
+      "name": "Public Transport Tickets",
+      "amount": "-15",
+      "type": "expense",
+      "catagory": "transport",
+      "date": "2023-10-10",
+      "id": 22
+    },
+    {
+      "name": "Drink in amazon",
+      "amount": -65,
+      "type": "expense",
+      "catagory": "food-beverage",
+      "date": "2023-11-04",
+      "id": 23
     }
   ]
 }

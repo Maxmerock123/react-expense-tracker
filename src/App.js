@@ -5,7 +5,9 @@ import Display from './components/Display'
 
 
 const fetchData = async ()=>{
-  const res = await fetch("http://localhost:5000/transaction");
+  const res = await fetch("http://localhost:5000/transaction",{
+    mode:  "cors"
+  });
   if (!res.ok){
     console.log("fail to fetch")
   }
@@ -42,6 +44,8 @@ function App() {
   }
   return (
     <div>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik"></link>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geologica"></link>
       <div className="App">
         <div id='logo-container'>
           <h1 id='logo'>Expense Tracker App</h1>

@@ -8,7 +8,9 @@ const Display = ({onUpdate}) => {
     const [items,setItems] = useState([]);
 
     const fetchData = async ()=>{
-        const res = await fetch("http://localhost:5000/transaction");
+        const res = await fetch("http://localhost:5000/transaction",{
+            mode:  "cors"
+        });
         const data = await res.json()
         setItems(data)
         
@@ -41,7 +43,7 @@ const Display = ({onUpdate}) => {
     async function onDelete(event){
         console.log("item.id = ",event.currentTarget.id)
         const id = event.currentTarget.id
-        const res = await fetch(`http://localhost:5000/transaction/${id}`,{method:'DELETE'})
+        const res = await fetch(`http://localhost:5000/transaction/${id}`,{method:'DELETE',mode:  "cors"})
         .then(res => res.json())
         .then((result)=>{
             console.log(result)
@@ -64,9 +66,9 @@ const Display = ({onUpdate}) => {
                         <tr className='table-row'>
                             <th scope='col'>Date</th>
                             <th scope='col'>Name</th>
-                            <th scope='col'>type</th>
-                            <th scope='col'>catagory</th>
-                            <th scope='col'>amount</th>
+                            <th scope='col'>Type</th>
+                            <th scope='col'>Category</th>
+                            <th scope='col'>Amount</th>
                             <th scope='col'></th>
                         </tr>
                     </thead>
@@ -92,7 +94,6 @@ const Display = ({onUpdate}) => {
                             <h3>Total Remaining: {totalRemaining}</h3>      
                         </div>
                     </div>
-
             </div>
 
             
